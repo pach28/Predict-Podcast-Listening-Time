@@ -12,13 +12,13 @@ El desafío principal consistió en construir un modelo de regresión capaz de p
 
 Este repositorio incluye los siguientes notebooks, que exploran diferentes estrategias para el tratamiento de datos y el modelado:
 
-1.  **`NaN_Imputation_RF_y_Modelado_por_Combinacion.ipynb`**:
+1.  **`NaN_Imputation_RF_y_Modelado_por_Combinacion PPLT.ipynb`**:
     * **Análisis de Relaciones con la Variable Objetivo:** Se exploran las relaciones entre las diferentes características y la variable objetivo (listening time) para comprender mejor su influencia.
     * **Imputación de NaNs con Random Forest:** Dada la presencia de valores faltantes, se opta por utilizar modelos de Random Forest para imputar los NaNs, buscando una imputación más informada que la simple media o mediana.
     * **Análisis de Combinaciones de Episodio y Título:** Se identifica un gran número de combinaciones únicas de episodio y título de podcast (aproximadamente 4800). Se analiza el comportamiento de la variable objetivo para cada una de estas combinaciones.
     * **Modelado Específico por Combinación:** Dada la posible variabilidad en los patrones de escucha entre diferentes podcasts y episodios, se decide construir modelos predictivos específicos para cada combinación única de episodio y título.
 
-2.  **`NaN_Test_Imputation_Promedio_y_Ensemble_por_Combinacion.ipynb`**:
+2.  **`NaN_Test_Imputation_Promedio_y_Ensemble_por_Combinacion PPLT.ipynb`**:
     * **Descarte de NaNs en Train y Centrado en Test:** Se observa que la gran cantidad de datos en el conjunto de entrenamiento permite, en este caso, despreciar las filas con NaNs sin una pérdida significativa de información para el modelado. La atención se centra en el tratamiento de los NaNs en el conjunto de prueba.
     * **Ajuste de Outliers en Train y Test:** Se realiza un análisis y ajuste de los valores atípicos (outliers) en ambos conjuntos de datos (entrenamiento y prueba) para reducir su impacto negativo en el entrenamiento de los modelos.
     * **Imputación de NaNs en Test por Promedio de Combinación:** Los valores faltantes en el conjunto de prueba se imputan utilizando el promedio de la variable objetivo (listening time) para cada combinación única de título y episodio presente en el conjunto de entrenamiento.
